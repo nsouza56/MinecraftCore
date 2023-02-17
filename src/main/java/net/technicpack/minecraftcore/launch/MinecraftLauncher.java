@@ -153,7 +153,7 @@ public class MinecraftLauncher {
 
         params.put("launcher_name", "technic");
         params.put("launcher_version", "4." + buildNumber.getBuildNumber());
-
+        -Xmx61G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M
         // build jvm args
         String launchJavaVersion = javaVersions.getSelectedVersion().getVersionNumber();
         ArgumentList jvmArgs = version.getJavaArguments();
